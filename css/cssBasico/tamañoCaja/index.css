@@ -1,0 +1,18 @@
+.box{
+    background-color: rgb(226, 144, 226);
+    /* a continuación la diferencia entre usar dos caracteres para cada color y uno solo para cada color */
+    background-color: #007faf;
+    background-color: #07a7;
+    padding: 50px;
+    width: 100px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 2px solid #000;
+}
+/* 
+RGB: red green and blue => rojo, verde y azul 
+RGBA: red green and blue alfa => donde alfa se encarga de la opacidad o transparencia
+hexadecimal:0123456789abcdef
+*/

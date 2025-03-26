@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #333;
+}
+* {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    gap: 40px;
+}
+.box_container {
+    height: 1vh;
+}
+.box{
+    width: 80vw;
+    height: 92vh;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #0003;
+    animation: caja both;
+    
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 100%;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+@keyframes caja {
+    25% {
+        width: 65vw;
+    }
+    50% {
+        width: 80vw;
+    }
+    75% {
+        width: 65vw;
+    }
+    100% {
+        width: 80vw;
+    }
+
+}
+
+

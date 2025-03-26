@@ -1,0 +1,57 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+div, body{
+    box-sizing: border-box;
+}
+.flexbox{
+    display: flex;
+}
+.flex-item{
+    background-color: #ccc;
+    padding: 30px;
+    border: 1px solid #000;
+    flex-grow: 1;
+}
+@media screen and (max-width:600px){
+    .flexbox{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media print{
+    body{
+        font-size: 24pt;
+    }
+    /* solo aparece los cambios en la ventana de imprimir 
+}
+@media screen and (max-width:500px){
+    body{
+        font-size: 24px;
+        background-color: black;
+        color: white;
+    }
+} */
+

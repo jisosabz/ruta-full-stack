@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    color: #eee;
+    background-color: #222;
+}
+
+form{
+    background-color: transparent;
+    padding: 20px 0px;
+    max-width: 500px;/*tamaño máximo*/
+    margin:auto;
+    box-shadow: 0 0 5px #fff2;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.form_imput{
+    padding: 6px 20px;;
+}
+
+input, textarea, select{ 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: none;
+    border: 1px solid #6f6f6f;
+    /* margin: 10px 20px 10px 20px; */
+    box-shadow: 0 0 15px #0004;
+    background: transparent;
+    color: #eee;
+    border-radius: 4px;
+    font-size: 1em;
+    
+}
+textarea{
+    font-family: sans-serif;
+    resize: vertical;/* para que el textarea solo se pueda expandir vertialmente */
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 200px;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+label{
+    font-size: 1em;
+    line-height: 2;/*cuáto se separan las lineas*/
+}
+
+option{
+    background-color: #222;
+    /* no se puede dar padding ni margin */
+}

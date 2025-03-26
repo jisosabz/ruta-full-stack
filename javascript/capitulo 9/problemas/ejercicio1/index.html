@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="form-container">
+            <form action="" class="form" id="formulario">
+                <label for="">Nombre Completo</label>
+                <input required type="text" class="full-name" placeholder="John Doe" id="nombre">
+                <label for="">Email</label>
+                <input required type="email" class="email" placeholder="johndoe@email.com" id="mail">
+                <label for="">Materia adeudada</label>
+                <input required type="text" class="materia-adeudada" placeholder="Cálculo III" id="materia">
+
+                <input type="submit" class="enviar" id="enviar" value="Enviar">
+                <div class="resultado"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--  
+    formulario debe contener: 
+    -nombre, mail, materia adeudada
+    -validad mails y nombres
+    -enviar al servidor de manera pulida
+-->

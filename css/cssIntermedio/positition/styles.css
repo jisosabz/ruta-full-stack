@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    background-color: #ccc;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+.contenedor {
+    border: 2px solid black;
+    margin: 30px 50px;
+    background-color: #fff;
+    position: relative;
+    /* para que la caja de adentro al tener un position absolute tenga como referencia al
+    contenedor, al contenedor se le da un position relaive */
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #db7;
+    color: #fff;
+    /* position: relative;
+    z-index: 10; */
+}
+/* .box--blue{
+    background-color: blue;
+    top: 40px;
+    left: 40px;
+    erstos dos son los que tienen mas importancia
+    z-index: 20;
+}
+.box--red {
+    selecciona el primer hijo de su elemento padre en CSS.
+    top: 100px;
+    left: 80px;
+    background-color: red;
+    z-index: 30;
+} */
+
+/* #POSICION ABSOLUTA# */
+.box--blue {
+    background-color: #48e;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    /* las ultimas 5 lineas para que la caja se centre */
+}
+.box--red {
+    background-color: #e53;
+}

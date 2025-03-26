@@ -1,0 +1,11 @@
+1) inicial apache
+sudo systemctl start apache2
+2) detener apache
+sudo systemctl stop apache2
+3) reiniciar apache (si está en ejecución)
+sudo systemctl restart apache2
+4) desactivar en el inicio del sistema
+sudo systemctl disable apache2
+5) activar en el inicio del sistema
+sudo systemctl enable apache2
+

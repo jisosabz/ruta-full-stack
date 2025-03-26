@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+}
+.box {
+    margin: auto;
+    padding: 20px 50px;
+    /*borroso*/
+    filter: blur(10px);
+    /*escala de grises*/
+    filter: grayscale(1); 
+    /* ver backdrop filter: basicamente desefoca el fondo, no el conetenido */
+    filter: hue-rotate(0);
+    backdrop-filter: hue-rotate(-100deg);
+    position: absolute;
+    left: 300px;
+}
+img {
+    /*se suele usar para imagenes transparentes*/
+    /* filter: drop-shadow(0 0 15px #000);  */
+    max-width: 50%;
+    object-fit: cover;
+}

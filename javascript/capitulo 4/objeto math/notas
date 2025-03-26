@@ -1,0 +1,48 @@
+Métodos Matemáticos en JavaScript
+
+    Math.sqrt(x)
+    Devuelve la raíz cuadrada de un número.
+
+console.log(Math.sqrt(16)); // 4
+
+Math.cbrt(x)
+Devuelve la raíz cúbica de un número.
+
+console.log(Math.cbrt(27)); // 3
+
+Math.max(...values)
+Devuelve el mayor valor entre los argumentos proporcionados.
+
+console.log(Math.max(1, 2, 3)); // 3
+
+Math.min(...values)
+Devuelve el menor valor entre los argumentos proporcionados.
+
+console.log(Math.min(1, 2, 3)); // 1
+
+Math.random()
+Genera un número pseudoaleatorio entre 0 (incluido) y 1 (excluido).
+
+console.log(Math.random()); // Ejemplo: 0.678923
+
+Math.round(x)
+Redondea un número al entero más cercano.
+
+console.log(Math.round(4.6)); // 5
+console.log(Math.round(4.4)); // 4
+
+Math.fround(x)
+Devuelve la representación de punto flotante de precisión simple más cercana del número.
+
+console.log(Math.fround(1.5)); // 1.5
+
+Math.floor(x)
+Redondea un número hacia abajo al entero más cercano.
+
+console.log(Math.floor(4.9)); // 4
+
+Math.trunc(x)
+Devuelve la parte entera de un número, eliminando los decimales.
+
+console.log(Math.trunc(4.9)); // 4
+console.log(Math.trunc(-4.9)); // -4

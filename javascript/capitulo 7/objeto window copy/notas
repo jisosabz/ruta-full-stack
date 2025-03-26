@@ -1,0 +1,103 @@
+Métodos del navegador:
+open(url, name, specs):
+Abre una nueva ventana o pestaña del navegador con una URL especificada.
+Ejemplo:
+
+javascript
+Copiar código
+window.open("https://example.com", "_blank");
+close():
+Cierra la ventana actual o la ventana abierta con open().
+Ejemplo:
+
+javascript
+Copiar código
+window.close();
+closed:
+Propiedad booleana que indica si una ventana está cerrada (true) o no (false).
+Ejemplo:
+
+javascript
+Copiar código
+if (window.closed) {
+    console.log("Ventana cerrada");
+}
+stop():
+Detiene la carga de la página actual.
+Ejemplo:
+
+javascript
+Copiar código
+window.stop();
+alert(message):
+Muestra un cuadro de diálogo con un mensaje y un botón "Aceptar".
+Ejemplo:
+
+javascript
+Copiar código
+alert("Hola, mundo!");
+print():
+Abre la ventana de impresión del navegador.
+Ejemplo:
+
+javascript
+Copiar código
+window.print();
+prompt(message, default):
+Muestra un cuadro de diálogo con un mensaje, un campo de entrada y botones.
+Ejemplo:
+
+javascript
+Copiar código
+let nombre = prompt("¿Cómo te llamas?", "Anónimo");
+confirm(message):
+Muestra un cuadro de diálogo con un mensaje y botones "Aceptar" y "Cancelar".
+Retorna true si se selecciona "Aceptar" y false si se selecciona "Cancelar".
+Ejemplo:
+
+javascript
+Copiar código
+let seguro = confirm("¿Estás seguro?");
+Propiedades del navegador:
+screen:
+Devuelve información sobre la pantalla del dispositivo (ancho, alto, etc.).
+Ejemplo:
+
+javascript
+Copiar código
+console.log(window.screen.width);
+screenLeft:
+Devuelve la posición horizontal de la ventana con respecto a la pantalla.
+Ejemplo:
+
+javascript
+Copiar código
+console.log(window.screenLeft);
+screenTop:
+Devuelve la posición vertical de la ventana con respecto a la pantalla.
+Ejemplo:
+
+javascript
+Copiar código
+console.log(window.screenTop);
+scrollX:
+Devuelve el número de píxeles que la ventana ha sido desplazada horizontalmente.
+Ejemplo:
+
+javascript
+Copiar código
+console.log(window.scrollX);
+scrollY:
+Devuelve el número de píxeles que la ventana ha sido desplazada verticalmente.
+Ejemplo:
+
+javascript
+Copiar código
+console.log(window.scrollY);
+scroll(x, y):
+Desplaza la ventana a una posición específica.
+Ejemplo:
+
+javascript
+Copiar código
+window.scroll(0, 100);

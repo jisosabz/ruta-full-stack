@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    background-color: #222;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn{
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 6px;
+    letter-spacing: 3px;
+    position: relative;
+
+}
+.btn-1{
+    border: 2px solid #48e;
+    overflow: hidden;
+}
+.btn-1::before{
+    content: '';
+    background-color: #48e;
+    display: block;
+    height: 200%;
+    width: 140%;
+    position: absolute;
+    z-index: -1;
+    transition: top .6s, left .6s;
+    border-radius: 50%;
+    top: 100%;
+    left: 30%;
+}
+.btn-1:hover::before{
+    top: -30%;
+    left: -20%;
+}
+
+/* botón 2  */
+.button-container:has(.btn-2){
+    filter: drop-shadow(0px 0px 15px #48e);
+}
+
+.btn-2{
+    border: 1px solid #fff3;
+}
+.btn-2:hover{
+    color: #48e;
+    border-color: #48e;
+    box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+    text-shadow: 0px 0px 9px #48ee, 0px 0px 3px #48e2;
+    animation: parpadeo 1s infinite alternate backwards;
+}
+
+@keyframes parpadeo {
+    0%{
+        color: #fff3;
+        border: 1px solid #fff3;
+        text-shadow: 0px;
+        box-shadow: 0px;
+    }
+    25%{
+        border-color: #48e;
+        box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+        text-shadow: 0px 0px 9px #48ee, 0px 0px 3px #48e2;
+        animation: parpadeo 3s infinite alternate backwards;
+    }
+    50%{
+        color: #fff3;
+        border: 1px solid #fff3;
+        text-shadow: 0px;
+        box-shadow: 0px;
+    }
+    75%{
+        border-color: #48e;
+        box-shadow: 0px 0px 6px #48e3, 0px 0px 16px #48e5;
+        text-shadow: 0px 0px 9px #48ee, 0px 0px 3px #48e2;
+        animation: parpadeo 3s infinite alternate backwards;
+    }
+    100%{
+        color: #fff3;
+        border: 1px solid #fff3;
+        text-shadow: 0px;
+        box-shadow: 0px;
+    }
+    
+}

@@ -1,0 +1,13 @@
+#titulo {
+    color: green;
+}
+
+.titulo {
+    color: blue !important; 
+}
+
+h1 {
+    color: red !important;
+}
+
+/* al final el que más prioridad tiene es !important */

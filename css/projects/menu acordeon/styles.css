@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+body,
+div,
+ul,
+li,
+a,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: Montserrat, sans-serif;
+  --bg-color: color-mix(in srgb, #f62 70%, #fff);
+  --text-color: #444;
+  --faq-color: #fff;
+  --dark-color: #f62;
+}
+.faq {
+  max-width: clamp(300px, 70%, 700px);
+  margin: auto;
+}
+.faq details {
+  background-color: var(--faq-color);
+  margin: 7px;
+  padding: 7px;
+}
+summary::marker {
+  content: "";
+}
+summary::before {
+  content: "+";
+  color: #f62;
+  position: absolute;
+  right: 0;
+}
+details[open] summary::before {
+  content: "-";
+}
+summary {
+  user-select: none;
+  position: relative;
+}
+.content {
+  padding: 10px 20px;
+  padding-top: 5px;
+  margin-top: 5px;
+  border-top: 1px solid var(--bg-color);
+  font-size: 0.8rem;
+}

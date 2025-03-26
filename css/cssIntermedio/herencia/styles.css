@@ -1,0 +1,19 @@
+body {
+    color: blue;
+}
+div {
+    color: brown;
+    font-family: sans-serif;
+}
+
+div {
+    width: 50%;
+}
+h1 {
+    color: inherit;
+    /* hereda el color del elemento padre */
+    /* en caso que el padre no tenga color, busca el color del abuelo y asi... */
+    color: initial;
+    /* no hereda el color del padre */
+    /* unset: recetea el color, revert intenta incontral un estilo o si no lo vueeve a inerit */
+}

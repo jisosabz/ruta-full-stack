@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture, source, media</title>
+</head>
+<body>
+    <picture>
+        <source srcset="../../multimedia/dalto.webp" type="image/webp">
+        <source media="(max-width: 400px)" srcset="../../multimedia/dalto-small.jpg">
+        <source media="(max-width: 600px)" srcset="../../multimedia/dalto-medium.jpg">
+        <img src="../../multimedia/dalto.jpg" alt="">
+    </picture>
+    <!-- va ir mostrando por orden, si no carga el primero, lo hará el segundo y asi sucesivamente, si no carga nada, cargará la img -->
+</body>
+</html>

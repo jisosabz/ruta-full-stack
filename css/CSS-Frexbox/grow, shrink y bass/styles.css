@@ -1,0 +1,42 @@
+div, body{
+    font-family: sans-serif;
+    background-color: #ccc;;
+    box-sizing: border-box;
+}
+.flexbox{
+    display: flex; 
+    flex-flow: row wrap;
+    /* border: 2px solid #000; */
+    margin: 20px;
+    height: 200px;
+    align-items: center;
+    justify-content: start;
+    /* background-color: #fff; */
+    gap: 20px;
+}
+.flex-item{
+    background-color: #800;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    /* una propiedad que resume flex basis, shrink y grow es: */
+    flex: 0 1 auto; /*por defecto */
+    flex: 1 1 100px
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* tamaño base */
+    /* flex-basis: 150px; */
+}
+.flex-item:nth-child(2n){
+    background-color: #f9a;
+    /* flex-grow: 4; */
+    /* se encoje tres veces más  */
+    /* flex-shrink: 0;
+    flex-grow: 2; */
+}
+.flex-item:last-child{
+    background-color: #000;
+    /* flex-grow: 4; */
+    /* flex-shrink: 0 */
+}
+/* lo que hace order es cambiar el orden solo a nivel visual */

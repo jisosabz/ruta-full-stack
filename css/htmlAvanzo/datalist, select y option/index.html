@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../imagenes/usuario.png" type="image/pnh">
+    <title>datalist, select y option</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="">
+        <!-- IMPUT -->
+        <h2>Formulario de contacto</h2>
+        <div class="form_imput">
+            <label for="nombre" >Nombre completo</label>
+            <input id="nombre" ="text" placeholder="Jesús Iván Sosa Báez">
+        </div>
+        <div class="form_imput">
+            <label>Email
+                <input type="email" placeholder="ejemplo@gmail.com">
+            </label>
+        </div>
+        <!-- SELECT Y OPTION -->
+        <div class="form_imput">
+            <label>Tipo de usuario
+                <select name="type-of-user" >
+                    <!-- Ctrl + Shift + Alt + ↓ -->
+                    <option value="user1">Seguidor/a</option>
+                    <option value="user2">Empresa</option>
+                    <option value="user3">Otro</option>
+                </select>
+            </label>
+        </div>
+        <!-- DATALIST Y OPTION -->
+        <div class="form_imput">
+            <label>Referente 
+                <input list="referente" name="referente" type="text">
+                <datalist id="referente" name="type-of-user" >
+                    <!-- Shift + Alt + ↓ -->
+                    <option>Un creador de contenido</option>
+                    <option>Una Empresa</option>
+                    <option>Un amigo</option>
+                    <option>Otro</option>
+                </datalist>
+            </label>
+        </div>
+        <!-- TEXT AREA -->
+        <div class="form_imput">
+            <label for="mensaje">Mensaje</label>
+            <textarea  id="mensaje" rows="5" placeholder="Deja tu mensaje... " ></textarea>
+            <!-- rows son las cantidad de lineas que el usuario puede escribir -->
+        </div>
+    </form>
+</body>
+</html>

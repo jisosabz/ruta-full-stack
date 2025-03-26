@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+div{
+    box-sizing: border-box;
+}
+.box{
+    margin: 20px;
+    background-color: #fff;
+    padding: 6px;
+    border: 4px solid #48e;
+    border-radius: 39px;
+}
+.barra{
+    padding: 40px;
+    background-color: #48e;
+    border-radius: 30px;
+    width: 10%;
+    animation-name: llenar_barra;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards; /*propiedad por defecto*/
+    animation-fill-mode: none;
+    animation-fill-mode: both; /*aunque la animacion no haya iniciado ya tiene las propiedades definidas por el from, es el más usado*/
+    animation-timing-function: linear; /*para que la ejecucion de la transición sea pareja*/
+    animation-iteration-count: infinite; /*cuantas veces se repita la animacion*/
+    animation-direction: reverse;
+    animation-direction: alternate;
+}
+.barra:active{
+    animation-play-state: paused;
+}
+
+@keyframes llenar_barra {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+        background-color: #f33;
+    }
+}

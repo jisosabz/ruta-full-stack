@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* asi se trabaja con las imaganes */
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* asi se trabajo con los videos */
+.container{
+    max-width: 100%;
+    aspect-ratio: 16/9; 
+}
+video{
+    max-width: 100%;
+}

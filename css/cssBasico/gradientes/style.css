@@ -1,0 +1,33 @@
+body{
+    background-color: red;
+    margin: 0;
+}
+.box{
+
+     /* gradientes radiales */
+    background: radial-gradient(red,#000a);
+    
+    /* gradientes lineales */
+    background: linear-gradient(transparent 50%,#000a);
+    background: linear-gradient(transparent,#000a, #0f0e, blue);
+    background: linear-gradient(transparent,#000a);
+
+    /*
+    Si se desea que el gradiente vaya de izquierda a derecha se pone primero to right
+    hacia la izquierda to left, luego to top, to botton
+    */
+    margin: 0;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #900a;
+}
+h1{
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

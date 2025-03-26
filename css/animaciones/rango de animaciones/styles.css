@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    background-color: #ccc;
+}
+.crecedor {
+    height: 100vh;
+}
+.box{
+    margin: auto;
+    background-color: #48e;
+    padding: 20px;
+    animation: cambio_color both;
+    animation-timeline: view();
+    animation-range-start: contain 50%;
+    animation-range-end: contain 80%;
+}
+@keyframes cambio_color {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+        background-color: #f33;
+    }
+}

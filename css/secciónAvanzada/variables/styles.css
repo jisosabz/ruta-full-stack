@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    padding: 20px;
+}
+*{
+    box-sizing: border-box;
+}
+.box{
+    /* creando variables */
+    --colorPrincipal: #f44;
+    /* creando variables */
+    background-color: var(--colorPrincipal);
+    display: grid;
+    place-content: center;
+    color: #fff;
+    margin: 120px auto;
+    padding: 0 40px;
+    font-size: clamp(2.4rem, 3vw, 5rem);
+    width: clamp(800px, 100%, 1400px);
+    /* valor minimo, ideal, máximo */
+}
+h1{
+    font-size: 2.2em;
+    margin-bottom: 0;
+}

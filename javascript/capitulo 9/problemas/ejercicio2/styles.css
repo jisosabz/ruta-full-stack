@@ -1,0 +1,17 @@
+body {
+    font-family: Montserrat;
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+    grid-auto-rows: 50px;
+}
+.grid-item {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #48e;
+}
+.titulo {
+    font-weight: bold;
+}

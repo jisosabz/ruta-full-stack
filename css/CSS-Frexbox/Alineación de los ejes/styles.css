@@ -1,0 +1,54 @@
+div, body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid #000;
+    margin: 20px;
+    justify-content: center;
+    /* propiedad por defecto */
+    justify-content: start;
+    justify-content: space-between;
+    /* un mismo espacio en los costados y los margenes no colapsan */
+    justify-content: space-around;
+    /* para que tengan el mismo espaciado en los costados, de manera que los margenes colapsen */
+    justify-content: space-evenly;
+    
+    height: 400px;
+    /* propiedad por defecto, se estira para llenar el eje cruzado*/
+    align-items: stretch;
+    align-items: start;
+    align-items: end;
+    align-items: center;
+    /* Alinea los elementos a lo largo de la línea base de su texto. */
+    align-items: baseline;
+    align-content: start;
+    align-content: center;
+    align-content: end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: stretch;
+
+    /* para centrar un solo elemento */
+    justify-content: center;
+    align-items: center;
+
+}
+.flex-item {
+    
+    width: 100px;
+    background-color: #911;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+}
+.flex-item:first-child {
+    background-color: #d56;
+}
+.flex-item:last-child {
+    background-color: #000;
+}

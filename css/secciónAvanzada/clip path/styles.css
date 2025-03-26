@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #fff;
+}
+img {
+    max-width: 100%;
+    clip-path: circle(50% at 100px 100px);
+    /* buscar clip-path generator para hacer figuras */
+}

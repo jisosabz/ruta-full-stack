@@ -1,0 +1,31 @@
+body{
+    background-color: #0e9;
+    margin: 0;
+}
+.box{
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    background-color: #000f;
+    background-size: 100%;
+    background-image: url(https://images.pexels.com/photos/27438918/pexels-photo-27438918/free-photo-of-mar-amanecer-paisaje-puesta-de-sol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* background-size: contain; hace que la imagen entre en el contenedor o trata al menos */
+    /* background-repeat: no-repeat; hace que la imagen no se repita por más que tenga cover */
+    /* background-size: cover; no se altera la resolución de la imagen por más que cambie la resolución del navegador */
+    background-position: top;/*tiene lef top, botton 10px a la izquierda etc*/
+    background-attachment: fixed;/*hace que la imagen no se mueva con el paso del scroll*/
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* para generalizar */
+    background: url(https://images.pexels.com/photos/27438918/pexels-photo-27438918/free-photo-of-mar-amanecer-paisaje-puesta-de-sol.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) top / cover fixed #6fa;
+}
+p{
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.filtro{
+    height: 100%;
+    width: 100%;
+    background-color: #000a;
+}

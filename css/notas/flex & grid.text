@@ -1,0 +1,90 @@
+Flexbox
+¿Para qué sirve?
+
+Flexbox es ideal para distribuir elementos en una sola dimensión (horizontal o vertical). Se usa para alinear y espaciar elementos en filas o columnas, y se adapta automáticamente al espacio disponible.
+Propiedades principales
+
+    Contenedor (display: flex): Activa el modelo Flexbox.
+
+    Dirección (flex-direction): Controla la dirección de los elementos.
+        row (por defecto): en fila horizontal.
+        column: en columna vertical.
+
+    Alineación en el eje principal (justify-content): Alinea elementos horizontalmente.
+        Valores comunes: flex-start, center, flex-end, space-between, space-around.
+
+    Alineación en el eje cruzado (align-items): Alinea elementos verticalmente en el contenedor.
+        Valores comunes: stretch (por defecto), center, flex-start, flex-end.
+
+    Flexibilidad (flex-grow, flex-shrink, flex-basis): Controla el tamaño de los elementos.
+        flex-grow: cuánto puede crecer un elemento.
+        flex-shrink: cuánto puede reducirse.
+        flex-basis: tamaño inicial de un elemento.
+
+    Orden (order): Cambia el orden visual de los elementos sin modificar el HTML.
+
+Ventajas de Flexbox
+
+    Ideal para layouts en una sola dirección (filas o columnas).
+    Útil para centrar elementos, tanto horizontal como verticalmente.
+
+CSS Grid
+¿Para qué sirve?
+
+CSS Grid es excelente para crear diseños bidimensionales (con filas y columnas). Es más adecuado para layouts de página completos y complejos, permitiendo manejar fácilmente filas y columnas al mismo tiempo.
+Propiedades principales
+
+    Contenedor (display: grid): Activa el modelo de CSS Grid.
+
+    Definir columnas y filas (grid-template-columns y grid-template-rows): Establece la estructura básica de columnas y filas.
+        Ejemplo: grid-template-columns: 1fr 2fr; (crea dos columnas, la segunda es el doble de ancha que la primera).
+
+    Espaciado (gap, column-gap, row-gap): Controla el espacio entre filas y columnas.
+        Ejemplo: gap: 10px; (agrega espacio de 10px entre todas las celdas).
+
+    Colocación de elementos (grid-column, grid-row): Define la posición de los elementos en el grid.
+        Ejemplo: grid-column: 1 / 3; (hace que un elemento ocupe las columnas 1 y 2).
+
+    Alineación (justify-items, align-items, justify-content, align-content): Alinea el contenido de las celdas.
+        justify-items: Alinea el contenido de cada celda horizontalmente.
+        align-items: Alinea el contenido de cada celda verticalmente.
+
+    Plantilla de áreas (grid-template-areas): Define un layout basado en áreas nombradas.
+        Ejemplo:
+
+        grid-template-areas:
+          "header header"
+          "sidebar content";
+
+    La propiedad place-content en CSS es una propiedad abreviada que combina align-content y justify-content. Sirve para alinear el contenido de un contenedor en ambas direcciones (vertical y horizontal) en un solo paso, en el contexto de Flexbox y CSS Grid.
+Sintaxis
+
+place-content: <align-content> <justify-content>;
+
+    Si se especifica un solo valor, este se aplica tanto para align-content (eje vertical) como para justify-content (eje horizontal).
+    Si se dan dos valores, el primero se aplica a align-content y el segundo a justify-content.
+
+Valores comunes
+
+    center: centra el contenido en ambas direcciones.
+    start, end: alinea el contenido al inicio o al final de cada eje.
+    space-between, space-around, space-evenly: distribuye el espacio libre entre los elementos de diferentes maneras.
+
+Ejemplos
+
+    Centrar el contenido en ambas direcciones:
+
+place-content: center;
+
+Alinear el contenido al inicio en el eje vertical y al final en el horizontal:
+
+place-content: start end;
+
+Distribuir el contenido con space-between en ambas direcciones:
+
+place-content: space-between; 
+
+Ventajas de CSS Grid
+
+    Ideal para layouts complejos y bidimensionales.
+    Permite definir zonas de la página de manera clara y estructurada.

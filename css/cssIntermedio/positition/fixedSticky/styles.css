@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: justify;
+}
+.contenedor {
+    padding: 150px;
+    background-color: blue;
+    position: relative;
+}
+.box {
+    height: 60px;
+    width: 250px;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 20px;
+    padding: 2px;
+    border: 1px solid black;
+    border-right: 0;
+    box-shadow: 0 0 40px #0009;
+    text-align: left;
+    border-radius: 10px 0 0 10px;
+}
+h2 {
+    margin: 0;
+    font-size: 18px;
+}
+p {
+    margin: 0;
+    font-size: 14px;
+}
+.box-fixed {
+    height: 60px;
+    width: 100vw;
+    background-color: #f00a;
+    position: sticky;
+    top: 200px;
+}

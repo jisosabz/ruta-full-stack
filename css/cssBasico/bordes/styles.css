@@ -1,0 +1,49 @@
+div{
+    background: red;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+
+    /* ahora los bordes */
+    /* border-width: 5px;
+    border-color: black;
+    border-style: solid; */
+
+    /* para usar las 3 anteriores en una se usa lo siguiente:  */
+    border: 3px solid black;
+    /* nota: es diferente border-radius en px y en porcentajes*/
+    border-radius: 100px;
+    /* nota: se puede usar bordes solo arriba, derecha, abajo e izquiera con
+    border-top, left, rigth, botton */
+
+    /* ES UTIL SABER  */
+    border-radius: 0;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    /* lo anterior se puede resumir en  */
+    /* en sentido de la ajugas del reloj
+     */
+    border-radius: 100px 0 100px 0;
+
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: blue;
+
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+    border-bottom-color: black;
+}
+input{
+    margin: 5px;
+    padding: 6px 9px;
+    border: none;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    background: transparent;
+    color: aliceblue;
+    border-radius: 5px;
+}
+body{
+    background: black;
+
+}

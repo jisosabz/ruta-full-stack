@@ -1,0 +1,21 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+}
+body{
+    margin: 0;
+}
+
+.default{
+    padding: 30px;
+    border: 10px solid black;
+}
+
+.new{
+    /* border box hace que no cambie el tamaño a pesar del padding por ejemplo; */
+    box-sizing: border-box;
+    padding: 30px;
+    border: 10px solid black;
+}

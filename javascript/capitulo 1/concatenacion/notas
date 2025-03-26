@@ -1,0 +1,40 @@
+1. Usando el operador +
+
+    Es la forma clásica de concatenar strings.
+    Convierte valores no string a string automáticamente.
+
+let name = "Iván";
+let greeting = "Hola, " + name + "!";
+console.log(greeting); // "Hola, Iván!"
+
+2. Usando el operador +=
+
+    Se usa para agregar valores a una cadena existente.
+
+let message = "Hola";
+message += ", ¿cómo estás?";
+console.log(message); // "Hola, ¿cómo estás?"
+
+3. Usando plantillas literales (Template Literals)
+
+    Se escriben con backticks (`) y permiten insertar variables o expresiones directamente usando ${}.
+    Es más limpio y legible.
+
+let name = "Iván";
+let age = 25;
+let message = `Hola, soy ${name} y tengo ${age} años.`;
+console.log(message); // "Hola, soy Iván y tengo 25 años."
+
+Comparación:
+
+    + y +=: Menos legibles y propensos a errores en cadenas largas.
+    Template Literals: Recomendados porque son más claros, especialmente al incluir variables o expresiones.
+
+Otros usos:
+
+    Concatenar valores no strings (números, objetos, etc.) convierte automáticamente los valores en cadenas.
+
+let result = "El resultado es: " + 42;
+console.log(result); // "El resultado es: 42"
+
+En resumen: Usa template literals (``) siempre que sea posible para una concatenación más clara y eficiente.

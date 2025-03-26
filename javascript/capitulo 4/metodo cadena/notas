@@ -1,0 +1,77 @@
+Manipulación básica:
+
+    concat(): Junta dos o más cadenas.
+
+"Hola".concat(" mundo"); // "Hola mundo"
+
+repeat(): Devuelve la misma cadena repetida un número específico de veces.
+
+"Hola".repeat(3); // "HolaHolaHola"
+
+trim(): Elimina los espacios en blanco al inicio y al final de la cadena.
+
+    "  Hola  ".trim(); // "Hola"
+
+Buscar y verificar:
+
+    includes(): Comprueba si una cadena contiene otra.
+
+"Hola mundo".includes("mundo"); // true
+
+indexOf(): Devuelve el índice de la primera aparición de una subcadena.
+
+"Hola mundo".indexOf("mundo"); // 5
+
+lastIndexOf(): Devuelve el índice de la última aparición de una subcadena.
+
+"Hola mundo mundo".lastIndexOf("mundo"); // 11
+
+startsWith(): Verifica si una cadena comienza con una subcadena.
+
+"Hola mundo".startsWith("Hola"); // true
+
+endsWith(): Verifica si una cadena termina con una subcadena.
+
+    "Hola mundo".endsWith("mundo"); // true
+
+Manipulación avanzada:
+
+    slice(): Extrae una parte de la cadena desde un índice inicial hasta uno final (no incluido).
+
+"Hola mundo".slice(0, 4); // "Hola"
+
+substring(): Similar a slice(), pero no admite índices negativos.
+
+"Hola mundo".substring(0, 4); // "Hola"
+
+split(): Divide una cadena en un arreglo según un separador.
+
+"Hola mundo".split(" "); // ["Hola", "mundo"]
+
+padStart(): Rellena la cadena al inicio con caracteres hasta alcanzar una longitud específica.
+
+"5".padStart(3, "0"); // "005"
+
+padEnd(): Rellena la cadena al final con caracteres hasta alcanzar una longitud específica.
+
+    "5".padEnd(3, "0"); // "500"
+
+Conversión de mayúsculas y minúsculas:
+
+    toLowerCase(): Convierte la cadena a minúsculas.
+
+"HOLA".toLowerCase(); // "hola"
+
+toUpperCase(): Convierte la cadena a mayúsculas.
+
+    "hola".toUpperCase(); // "HOLA"
+
+Otros:
+
+    charAt(): Devuelve el carácter en un índice específico.
+
+"Hola".charAt(1); // "o"
+
+toString(): Convierte un valor a su representación en cadena.
+
+(123).toString(); // "123"

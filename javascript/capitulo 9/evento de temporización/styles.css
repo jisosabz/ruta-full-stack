@@ -1,0 +1,16 @@
+body {
+    color: #fff;
+    font-family: sans-serif;
+    background-color: #666;
+}
+.container {
+    padding: 30px;
+    background-color: #48e;
+}
+.input-prueba {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px;
+    color: #444;
+    outline: none !important;
+}

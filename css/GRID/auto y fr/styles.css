@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* es más practico decir */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 200px 100px minmax(300px, 500px );
+    grid-template-rows: 1fr 1fr;
+    /* mezclando ambas */
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    grid-template-rows: repeat(2, 200px);
+}
+.grid-items{
+    background-color: #48e;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+} 

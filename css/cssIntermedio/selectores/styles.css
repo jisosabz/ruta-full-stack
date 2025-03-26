@@ -1,0 +1,46 @@
+img[src="../../imagenes/dalto.jpg"] {
+    /* solo funciona si en html src tiene esa estructura */
+    width: 100%;
+}
+
+img[src$="jpg"] {
+    /* solo funciona si el src tiene una imagen tipo jpg*/
+    width: 100%;
+}
+
+img[src^="dalto"] {
+    /* solo funciona si el src empieza con la palabra dalto*/
+    width: 100%;
+}
+
+/* ##selectores descendientes## */
+ul li {
+    color: red;
+    /* solo le da color a los li's que estan dentro de los ul's
+    #solo tiene que estar adentro, puede ser en cualquier parte adentro#
+    */
+}
+ul > strong {
+    color: #d0d;
+    /* salo selecciona los hijos direcots */
+}
+li > strong {
+    color: #abc;
+}
+
+/* ##selectores adyacentes## */
+h1+p {
+    /* estoy seleccionando los p's que este a lado de un h1 */
+    color: blue;
+}
+
+/* ##selector de hermanos generales## */ 
+h1~p {
+    color: #3fa9;
+    /* todos los p's que le siguen a un h1 */
+}
+
+h1+p+p {
+    color: black;
+    /* un p que le sigue a otro p que le sigue a un h1 */
+}

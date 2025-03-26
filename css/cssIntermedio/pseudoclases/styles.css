@@ -1,0 +1,76 @@
+h1 {
+    color: #488;
+    font-family: sans-serif;
+    margin: 30px;
+}
+/* seleccionar el h1 cuando el mouse está encima */
+h1:hover {
+    
+    color: black;
+    background-color: #ccc;
+}
+/* cuando se da click al h1 */
+h1:active {
+    color: red;
+    background-color: black;
+}
+
+/* seleccionando el primer li */
+li:first-child {
+    color: red;
+}
+/* seleccionando al segundo */
+li:nth-child(2) {
+    color: green;
+}
+/* seleccionando al tercero */
+li:nth-child(3) {
+    color: #760;
+}
+/* seleccionando el ultimo li */
+li:last-child{
+    color: blue;
+}
+/* seleccionar los multiplos de 4 */
+li:nth-child(4n){
+    color: violet;
+}
+/* nth-child solo aplica a los elementos de misma naturaleza, para lo que no son 
+la misma etiqueta se utiliza :nth-of-type() 
+*/
+
+/* selcciona todas menos elemento 4 */
+.lista li:not(.elemento4) {
+    color:red;
+    
+}
+
+/* solo selcciona a los elemento vacios */
+div:empty{
+    background-color: #488;
+    padding: 30px;
+}
+
+input[type="checkbox"]{
+    margin: 50px;
+}
+/* se aplica en caso de que el checkbox esté chekeado */
+input[type="checkbox"]:checked{
+    margin: 0px;
+}
+/* seleccionando enlaces visitados */
+a:visited {
+    color: blue;
+}
+
+/* seleccionando los enlaces no visitados */
+a:link {
+    color: red;
+}
+/* buscar pseudocleases en mdn web docs */
+input:invalid{
+    color:red
+}
+input:valid{
+    color:green
+}

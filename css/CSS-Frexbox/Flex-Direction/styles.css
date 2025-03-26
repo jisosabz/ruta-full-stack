@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    /* cambiamos la direccion del main-axis */
+    flex-direction: row-reverse;
+    /* de arriba hacia abajo , main axis vertical*/
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+.flex-item {
+    
+    width: 180px;
+    margin: 10px;
+    background-color: #911;
+    margin: 10px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+.flex-item:first-child {
+    background-color: #d56;
+}
+.flex-item:last-child {
+    background-color: #000;
+    /* 12:8 */
+}

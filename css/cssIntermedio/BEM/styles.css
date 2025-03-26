@@ -1,0 +1,41 @@
+
+/* 
+ESTO SE HACE SI NO USAMOS LA METODOLOGÍA BEM
+.lista {
+    border: 2px solid #000;
+}
+.ingrediente {
+    color: grey;
+    margin: 10px 0px;
+    list-style: square;
+}.ingredienteImportante {
+    color: brown;
+    margin: 10px 0px;
+    list-style: square;
+}
+.ingredienteDanino {
+    color: blue;
+    margin: 10px 0px;
+    list-style: square;
+} */
+
+/* ESTO ES CON LA METODOLOGÍA BEM */
+
+.lista {
+    border: 2px solid #000;
+}
+.lista--media {
+    opacity: 0.5;
+    background-color: #ccc;
+}
+.lista__item {
+    color: grey;
+    margin: 10px 0px;
+    list-style: square;
+}
+.item--importante{
+    color: blue;
+}
+.item--danino {
+    color: red;
+}

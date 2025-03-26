@@ -1,0 +1,176 @@
+<!-- HTML Básico -->
+Encabezado (<h1>): Solo un <h1> por página.
+required: Campo obligatorio.
+name: Identificador de <input>.
+placeholder: Ejemplo de entrada.
+value: Datos enviados al servidor.
+<span>: Para elementos específicos.
+<div>: Divide el contenido, es un elemento de bloque.
+HTML Avanzado
+<select>: Menú de opciones.
+<datalist>: Entrada con autocompletado.
+<fieldset>: Agrupa elementos en un cuadro.
+<details> y <summary>: Desplegable de contenido.
+Tablas: <tr> (filas), <td> (celdas), <th> (encabezados), <colspan> (columnas en celdas), <thead>, <tbody>, <tfoot> (secciones de la tabla).
+lazy loading: Carga de contenido mientras el usuario avanza.
+Etiquetas obsoletas: Como <font>, <center>, reemplazadas por CSS.
+HTML Semántico
+Estructura: <header>, <nav>, <section>, <main>, <aside>, <footer>.
+<!-- CSS Básico -->
+Clases y ID: Las clases (.) aplican estilos a grupos de elementos, IDs (#) identifican elementos únicos.
+Box Model:
+content: Contenido del elemento.
+padding: Espacio interno.
+border: Borde.
+margin: Espacio externo.
+Modelos de caja:
+content-box: El tamaño excluye bordes y padding.
+border-box: El tamaño incluye bordes y padding.
+Unidades de Medida
+Absolutas: cm, mm.
+Relativas: em, rem (heredan tamaño de fuente del contenedor superior).
+Viewport: vh (alto de ventana), vw (ancho de ventana), vmax, vmin.
+Gradientes: Degradados entre dos colores.
+Control de Flujo de Texto
+white-space: Controla saltos de línea (nowrap, pre, pre-wrap).
+text-overflow: ellipsis: Añade "..." cuando el contenido no cabe.
+word-wrap y text-wrap: Controlan el ajuste y corte de palabras.
+Flexbox
+Propiedades del Contenedor (display: flex;):
+flex-direction: Dirección de los elementos (row, column).
+flex-wrap: Envuelve los elementos (nowrap, wrap).
+justify-content: Alineación en eje principal (flex-start, center, space-between).
+align-items: Alineación en eje transversal (center, stretch).
+align-content: Espacio entre líneas (similar a align-items).
+Propiedades del Elemento:
+flex-grow, flex-shrink y flex-basis: Controlan crecimiento, reducción y tamaño base de los elementos.
+Display y Position
+Display:
+block: Ocupa ancho completo.
+inline: Solo ocupa el ancho del contenido.
+inline-block: Combina características de block e inline.
+Position:
+static: Posición por defecto.
+relative: Se mueve desde su posición original.
+absolute: Fuera del flujo, se posiciona respecto al contenedor padre con relative.
+fixed: Fijo respecto a la ventana.
+sticky: Se vuelve fijo al alcanzar un umbral.
+Accesibilidad Web
+alt: Descripción para imágenes.
+aria-label: Describe la función de botones o elementos.
+role: Define la función del elemento (ej., slider).
+Cascada y Especificidad
+Orden de estilos: La última regla tiene prioridad si tienen igual especificidad.
+Especificidad: IDs tienen más prioridad que clases y etiquetas.
+Pseudo Clases y Elementos
+Pseudo Clases: Aplican estilos según el estado del elemento (:hover).
+Pseudo Elementos: Seleccionan partes de un elemento (::before, ::after).
+Responsiveness
+Media Queries (@media): Aplica estilos según el tamaño de pantalla.
+Imágenes Responsivas:
+<picture> y <source>: Ofrecen imágenes alternativas.
+srcset y sizes: Selección de imágenes según condiciones de pantalla.
+Otros Conceptos
+Transiciones: Suavizan cambios (transition).
+Desbordamiento (overflow): Controla el contenido excedente (hidden, scroll, auto).
+Contorno: Borde visual sin ocupar espacio.
+Object Fit: Ajusta el contenido (fill, contain, cover).
+Metadatos: Información sobre la web, invisible para el usuario.
+Holy Grail Layout
+El Holy Grail Layout tiene una estructura básica que organiza elementos en una página web, distribuyéndolos de la siguiente manera:
+
+Header: Parte superior, normalmente contiene el título o navegación.
+Main Content: Contenido principal al centro.
+Left Sidebar: Barra lateral izquierda del contenido principal.
+Right Sidebar: Barra lateral derecha del contenido principal.
+Footer: Parte inferior, generalmente incluye información adicional o enlaces.
+main-wrapper: Contenedor solo para fines de estilo.
+aside: Contenido secundario.
+@supports (CSS)
+@supports permite verificar si el navegador soporta ciertas características de CSS, aplicando un conjunto de estilos si las soporta y otro si no.
+
+Container Queries
+Los Container Queries permiten aplicar estilos según el tamaño del contenedor, en lugar del tamaño de la ventana.
+
+css
+Copiar código
+.container {
+    container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+    .item {
+        background-color: blue;
+    }
+}
+CSS Grid
+CSS Grid permite trabajar con un diseño en dos ejes (horizontal y vertical). Al activar display: grid, el margin no colapsa.
+
+grid-template-columns: Define el tamaño de las columnas.
+auto: La celda ocupa el espacio disponible.
+fr: Toma todo el ancho disponible.
+repeat(n, value): Repite valores, p.ej., repeat(4, 1fr).
+minmax(min, max): Define un mínimo y máximo de tamaño.
+Grid explícito: Definido con grid-template-rows y grid-template-columns.
+Grid implícito: Creado automáticamente cuando se exceden las filas o columnas explícitas.
+Propiedades adicionales:
+
+grid-auto-flow: Cambia el sentido del eje principal (column o row).
+gap: Separa filas y columnas. Variantes: column-gap, row-gap.
+auto-fit y auto-fill:
+
+auto-fill: Llena el contenedor con columnas o filas, incluso si están vacías.
+auto-fit: Ajusta el número de columnas o filas necesarias, sin espacios vacíos.
+grid-column y grid-row
+grid-column / grid-row: Define la posición de un elemento en la cuadrícula.
+span n desplaza el elemento en n columnas o filas.
+Alineación en Grid
+justify-items: Alinea elementos dentro de sus celdas horizontalmente.
+justify-content: Alinea el grid en el eje horizontal cuando hay espacio extra.
+justify-self: Alinea un solo elemento dentro de su celda horizontalmente.
+align-items: Alinea elementos en sus celdas verticalmente.
+align-content: Alinea el grid en el eje vertical cuando hay espacio extra.
+align-self: Alinea un solo elemento dentro de su celda verticalmente.
+Animaciones en CSS
+@keyframes define los pasos de la animación. Ejemplo básico:
+
+css
+Copiar código
+@keyframes nombre_animacion {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+Propiedades de animación:
+
+animation-name: Nombre de la animación.
+animation-duration: Duración de la animación (e.g., 1s).
+animation-delay: Retraso de inicio (e.g., 1s).
+animation-fill-mode: Control de estilos antes y después de la animación (forwards, backwards, both, none).
+animation-timing-function: Velocidad de la animación (linear, ease, ease-in, ease-out, ease-in-out).
+animation-iteration-count: Repeticiones (1, infinite).
+animation-direction: Dirección de reproducción (normal, reverse, alternate).
+animation-play-state: Pausa o reanuda la animación (running, paused).
+Filtros y Transformaciones (CSS)
+Filtros (filter) y transformaciones (transform) aplican efectos y cambios visuales a los elementos.
+
+Filtros:
+
+blur(px): Desenfoque.
+brightness(%): Ajusta el brillo.
+contrast(%): Ajusta el contraste.
+grayscale(%): Escala de grises.
+invert(%): Invierte los colores.
+opacity(%): Ajusta la opacidad.
+saturate(%): Cambia saturación.
+sepia(%): Aplica tono sepia.
+Transformaciones:
+
+rotate(deg): Rota el elemento.
+scale(x, y): Escala el tamaño.
+translate(x, y): Desplaza el elemento.
+skewX(deg) / skewY(deg): Inclina el elemento en horizontal o vertical.
+matrix(a, b, c, d, tx, ty): Combinación compleja de transformaciones en 2D

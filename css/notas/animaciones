@@ -1,0 +1,56 @@
+1. Definiendo animaciones con @keyframes
+
+@keyframes permite especificar etapas de una animación, con cambios en las propiedades CSS en puntos clave.
+
+@keyframes nombre-animacion {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
+2. Aplicando animaciones con animation
+
+La propiedad animation activa las animaciones. Puedes usarla de forma abreviada o individualmente con sus subpropiedades.
+
+.elemento {
+    animation: nombre-animacion 2s ease-in-out infinite alternate;
+}
+
+Subpropiedades más comunes de animation:
+
+    animation-name: Nombre de la animación definida con @keyframes.
+    animation-duration: Duración del ciclo de animación (ej., 2s).
+    animation-timing-function: Ajusta la velocidad del cambio. Ejemplos:
+        ease, linear, ease-in, ease-out.
+    animation-delay: Tiempo antes de iniciar la animación.
+    animation-iteration-count: Número de repeticiones (e.g., infinite).
+    animation-direction: Dirección de reproducción de la animación.
+        normal: Ejecuta la animación de principio a fin.
+        reverse: Ejecuta de fin a inicio.
+        alternate: Alterna entre normal y reverse.
+    animation-fill-mode: Controla los estilos antes y después de la animación.
+        none: El estilo solo aplica durante la animación.
+        forwards: Retiene los estilos del último fotograma al terminar.
+        backwards: Aplica el primer fotograma antes de que la animación inicie.
+        both: Combina forwards y backwards, aplicando el estilo al inicio y al final de la animación.
+
+Ejemplo con both en animation-fill-mode
+
+.elemento {
+    animation: nombre-animacion 3s ease forwards both;
+}
+
+Aquí, both asegura que el elemento tome el primer fotograma desde el inicio (antes de que la animación inicie) y retenga el último fotograma al finalizar.
+Ejemplo completo
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.elemento {
+    animation: fadeInOut 4s ease-in-out infinite alternate both;
+}
+
+Este ejemplo crea un efecto de opacidad que aumenta y disminuye continuamente en ambos sentidos y retiene el estado final y inicial debido a both.

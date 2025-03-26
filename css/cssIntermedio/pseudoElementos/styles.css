@@ -1,0 +1,34 @@
+div {
+    padding: 20px;
+}
+h1::first-letter{
+    color: brown;
+    font-size: 3em;
+    letter-spacing: -10px;
+
+}
+div::first-line{
+    color: brown;
+    font-weight: bold;
+}
+
+/* al seleccionar algo, dicha seleccion nos genera el texto blanco y 
+el fondo azul para configurar esto se usa ::selection */
+div::selection{
+    background-color: red;
+    color: #fff;
+}
+input::placeholder{
+    color: brown;
+}
+li::marker{
+    color: brown
+}
+li::before{
+    content: 'Elemento: ';
+    color: brown;
+}
+li::after{
+    content: ' Después';
+    color: brown
+}

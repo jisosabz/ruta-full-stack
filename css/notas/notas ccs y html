@@ -1,0 +1,520 @@
+#----HTML----#
+toda pagina web solo puede tener un solo h1
+required: para no dejarlo vacio
+name: identificador de los inputs
+placeholder: da un ejemplo de lo que se debe escribir
+value: es lo que recibe el servidor
+span se usa para seleccionar algo muy puntual
+div: es un elemento que divide, un elemento de bloque
+
+#----CSS----#
+las clases sirven para aplicar estilos a un grupo de cosas
+las clases se seleccionan con puntos y los id's con #
+content: contenido
+padding: relleno, espacio entre el contenido
+border: border
+marging: margen, cuanto separamos una caja de otra caja
+contex box: contenido de la caja, el tamaño de la caja solo se aplica al contenido
+border box: el tamaño no incluye el del margen
+RGB: red, green and blue
+
+#----UNIDADES DE MEDIDA----#
+cm, mm son valores absolutos
+em, rem son valores relativos
+nota: si el tamaño de la fuente de la caja padre no esta definido, lo que hace em es buscar el tamaño de la fuente del abuelo y asi sucesivamente, puede llegar
+hasta la etiquete html cuyo tamaño de fuente por defecto es de 16px
+vh: es el tamaño del alto de la ventana disponible en el navegador: por ejemplo 50vh es 50% del tamaño del alto de la pantalla del navegador, vw es para el ancho
+1vmax = 1vh (si vh>vw)
+1vmin = 1vw (si vh>vw) y vicebersa
+
+gradiente: es medio un degradado, empieza siendo un color y termina siendo otro
+
+metadatos: proporcionan informacion sobre nuestra web. El usuario comun no puede ver los metadatos
+
+#----HTML AVANZADO----#
+select: permite seleccionar una de entre varias opciones
+datalist: escribimos algo y se autocompleta con opciones que predefinimos
+
+fieldset: para encerrar en un cuadrdo un conjunto de atributos
+
+details y summary: cuando buscamos algo en google generalmente nos aparece un menú 
+despegable de un resumen de la información que buscamos, de eso de encarga details y summary
+
+tablas: tr filas, td casillas para las filas, th para los encabezador
+colspan para saber cuantas columnas va ocupar
+thead,  tboy, tfoot separan el encabezado, el cuerpo y el pie de la tabla
+
+lazy loading: significa que el contenido debe ir cargandose mientras
+el usuario a llegando a dichas secciones
+
+code: se usa para dar a entender que es un codigo
+strong: para resaltar y darme más importancia 
+em: para darle énfasis a algo
+
+#----ETIQUETAS OBSOLETAS---#
+font, center, blink, big, strike ahora se usa del, u,
+en si los atributos que dan estilos en html, todos esos pueden 
+ser reemplazados por css
+
+#----HTML SEMÁNTICO----#
+header: encabezado
+nav: barra de navegación
+section: hace referencia a una sección del contenido, como sección de noticia, sección de comentarios, etc
+main: contiene al section que contiene al contenido principal de la página
+aside: esta relacionada con el contenido pero no tanto, un contido secundario pero relacionado con el main
+footer: pie de página 
+
+#----Accesibilidad web----#
+se trata se hacer páginas que sean adaptables para todos
+es muy importante usar los alt's
+area-label: tambien lee de lo que hace cada boton, etiqeuta,etc
+role: dice que funcion cuple, ejemplo role:slider
+cuando vas a usar buscar roles en internet
+ver como hacer paginas web accesibles
+
+#----Herencia----#
+una clase hijo hereda las atributos de una clase padre
+
+#---Cascada y Especificidad----#
+el orden de como se aplican los estilos si importan
+si dos reglas tienen la misma especificidad el orden es lo que importa
+
+si algo tiene mas especificidad que otra cosa predomina lo primero
+
+lo que hace especifico es el id y las clases, los id's tienen mayor prioridad a las clases
+
+#----Pseudo Clases----#
+nos permiten seleccionar un estado especifoco de un elemento
+#----Pseudo Elementos----#
+por ejemplo son las viñetas de los ul si para accederlos se usa ::
+
+#---metodología BEM----#
+es una metodología que nos permite reutilizar código
+se resuelven problema de especificidad
+se separa en bloque, elemento, modificadores
+
+#--Display--#
+display: block => convierte un elemento de linea en un elemento de bloque
+display: inline => al revés del block
+inline-block => es una mezcla de ambos
+display:none => no ocupa espacio en la pagina, no se representa visualmente
+
+#----Position----#
+nota: si cree n cajas, la caja a+1 esta mas arriba en eje z que la caja a
+nos permite apilar objetos
+static: posición por defecto
+relative: mantiene su posicion original pero si quiero puedo moverte a cualquier lado 
+ademas vas a ser un punto de referencia para los objetos dentro tuyo
+se reserva su lugar en la pagina
+z-index:permite mover una caja en el eje z 
+absulute: el objeto deja de ocupar espacio en la pagina y los demas objetos se comportan 
+como si no existiera
+#---- para que la caja de adentro al tener un position absolute tenga como referencia al
+contenedor, al contenedor se le da un position relaive */
+*fixed: es como obsule pero siempre se toma como referencia la ventana, no el contenedor y cuando 
+bajamos la pagina, sigue abajo la caja
+*sticky: se comporta como relative pero si se le da una posición y movemos la pagina, llega a esa posición y luiego se queda fija
+
+#--Transiciones--#
+*para que sirve: por ejemplo para que el cambio de un hover no sea tran brusco, sino que más gradual
+nota: la transición se da a la caja que se va transicionar, no al hover
+nota: para las transiciones de caja ver: https://cubic-bezier.com/#.25,.1,.25,1
+
+#----Desbordamiento----# 10:56
+*overflow: maneja el contenido que sobresale de su contenedor
+overflow: visible; /*lo que sobresalga del contenedor sera visible*/
+overflow: hidden; lo que sobresale no se ve
+overflow: scroll; se ve mediante un scroll todo el contenido
+que a su vez tienen overflow-x e overflow-y con estados hidden o scroll para oculatar los scrolles orizonates o verticales
+overflow: auto; el contenido se ajusta
+overflow: clip; funciona como hidden pero no le reserva un espacio al scroll
+
+#----Control de flujo de texto----#
+*La idea es controlar el texto y manejar su flujo
+white-space: nowrap; no va haber saltos de linea
+white-space: pre; usa los saltos de linea que yo doy en el codigo
+white-space: pre-rap; se comporta como pre pero no se desborda
+nota: si usamos white-space: nowrap, text-overflow: ellipsis y overflow:hidden se muestran tres puntos cuando el contenido no entra
+
+word-wrap: break-word; agarra una palabra y la rompe en silabas cuando se va a desbordar
+word-wrap: anywhere; las palabras largas se rompen si se Desbordamiento
+text-wrap: balance; balancea el texto para que encajen de una forma estetica
+text-wrap: pretty; evita las palabras sueltas al final y al inicio
+
+#----Objet Fit & Object Positio ----#
+cuando se define el alto y el ancho de un objeto lo que permite es modificar el comportamiento del contenido del objeto
+object-fit: fill; por defecto
+contain: para que la imagen entre por lo menos una vez
+cover: se adpata y no entra bien necesariamente
+object-fit: none; la resolucion de la imagen no cambia
+object position: para cuando se adapte la imagen podemos especificar que se adapte hacia arriba
+abajo izquierda o derecha
+
+#----Contorno----#
+es como un borde pero no ocupa espacio, solo ocupa aspecto visual a diferencia del borde
+
+#---EMMET---#
+li*4>a: crea 4 li's que tienen adentro a
+ul>li*4.list>a.link crea esto: 
+las llaves especifican el contenido
+#----Flexbox# 11:43
+Definición: es un modelo de caja, caja que se adapten al tamaño, que sean flexibles asi como su contenido
+nota: si o si deben tener una caja contenedora y a los elemenos de adentro se aplican las propiedades
+nota: la caja contenedora es el flexbox, y las cajas de adentro son los flex-item's
+nota: los flex-item son los hijos directos de los flex-box
+nota: display:flex; se puede encojer pero no agrandar
+nota: los item's si no tienen un tamaño definido, ocupan todo el crosaxis
+
+Contenedor Flex (display: flex; o display: inline-flex;)
+
+Propiedades del contenedor flex:
+
+    flex-direction
+        Define la dirección en la que los elementos flexibles se colocan en el contenedor.
+        Valores:
+            row: Coloca los elementos en una fila (de izquierda a derecha).
+            row-reverse: Coloca los elementos en una fila en orden inverso.
+            column: Coloca los elementos en una columna (de arriba hacia abajo).
+            column-reverse: Coloca los elementos en una columna en orden inverso.
+
+    flex-wrap
+        Controla si los elementos flexibles deben ajustarse en una o más líneas.
+        Valores:
+            nowrap: Todos los elementos están en una sola línea.
+            wrap: Los elementos se envuelven en múltiples líneas si es necesario.
+            wrap-reverse: Los elementos se envuelven en múltiples líneas, pero en orden inverso.
+
+    flex-flow
+        Es una propiedad abreviada para flex-direction y flex-wrap.
+        Valores: Una combinación de los valores de flex-direction y flex-wrap.
+
+    justify-content
+        Alinea los elementos flexibles a lo largo del eje principal.
+        Valores:
+            flex-start: Alinea al principio del contenedor.
+            flex-end: Alinea al final del contenedor.
+            center: Centra los elementos en el contenedor.
+            space-between: Distribuye el espacio entre los elementos.
+            space-around: Distribuye el espacio alrededor de los elementos.
+            space-evenly: Distribuye el espacio de manera uniforme entre los elementos.
+
+    align-items
+        Alinea los elementos flexibles a lo largo del eje transversal.
+        Valores:
+            flex-start: Alinea al inicio del eje transversal.
+            flex-end: Alinea al final del eje transversal.
+            center: Centra los elementos en el eje transversal.
+            baseline: Alinea los elementos a lo largo de sus líneas de base.
+            stretch: Estira los elementos para llenar el contenedor.
+
+    align-content
+        Alinea las líneas del contenedor flex cuando hay espacio adicional en el eje transversal.
+        Valores:
+            flex-start: Alinea las líneas al inicio del eje transversal.
+            flex-end: Alinea las líneas al final del eje transversal.
+            center: Centra las líneas en el eje transversal.
+            space-between: Distribuye el espacio entre las líneas.
+            space-around: Distribuye el espacio alrededor de las líneas.
+            stretch: Estira las líneas para llenar el contenedor.
+
+    align-items
+        Alinea los elementos flexibles en el eje transversal del contenedor.
+        Valores:
+            flex-start: Alinea los elementos al inicio del contenedor.
+            flex-end: Alinea los elementos al final del contenedor.
+            center: Centra los elementos en el contenedor.
+            baseline: Alinea los elementos a lo largo de la línea base de su texto.
+            stretch: Estira los elementos para que llenen el contenedor.
+
+Elemento Flex (flex)
+
+Propiedades del elemento flex:
+
+    flex-grow
+        Define cuánto crecerá el elemento flex en relación con otros elementos flexibles.
+        Valor por defecto: 0 (no crece).
+
+    flex-shrink
+        Define cuánto se reducirá el elemento flex en relación con otros elementos flexibles.
+        Valor por defecto: 1 (se reduce si es necesario).
+
+    flex-basis
+        Define el tamaño inicial del elemento flex antes de que se apliquen flex-grow y flex-shrink.
+        Valor por defecto: auto (tamaño del contenido).
+
+    flex
+        Propiedad abreviada para flex-grow, flex-shrink y flex-basis.
+        Valores: Combinación de tres valores (por ejemplo, 1 1 0).
+
+    align-self
+        Permite sobrescribir la alineación del elemento en el eje transversal para un elemento específico.
+        Valores: Los mismos que align-items (por ejemplo, auto, flex-start, flex-end, center, baseline, stretch).
+
+# --RESPONSING DESING
+srcset y sizes: permite elegir el archivo multimedia adecuando para cuidar el responsing desing, esto segun una condición y mejor el rendimiento de la página
+
+<picture>: Sirve para mostrar diferentes versiones de una imagen dependiendo del dispositivo o las condiciones de la pantalla (como el tamaño o la resolución).
+
+<source>: Va dentro de <picture> y define las imágenes alternativas. Cada <source> puede tener un atributo media para especificar cuándo debe usarse esa imagen (por ejemplo, con ciertas media queries).
+
+media (atributo): Se usa dentro de <source> para definir las condiciones, como el tamaño de la pantalla, bajo las cuales se debe usar esa imagen o recurso específico.
+
+En resumen, estos se usan juntos para crear imágenes adaptativas en sitios web responsivos.
+
+@media: Las media queries en CSS permiten aplicar diferentes estilos según las características del dispositivo, como el tamaño de la pantalla, la orientación o la resolución. Se usan para hacer que el diseño web sea responsivo, adaptándose a distintos dispositivos (móviles, tabletas, computadoras).
+# Holy grail
+El Holy Grail Layout se compone de estas partes:
+
+    Header: La parte superior del diseño, donde suele ir el título o navegación.
+    Main Content: La sección central que contiene el contenido principal de la página.
+    Left Sidebar: Una barra lateral a la izquierda del contenido principal.
+    Right Sidebar: Una barra lateral a la derecha del contenido principal.
+    Footer: La parte inferior del diseño, generalmente para información adicional o enlaces.
+
+main-wrapper: es un contenedor que solamente que solamente esta ahi con la finalidad de darle estilos 
+aside: contenido secundario
+
+# etiqueta @supports
+@supports: sirve para preguntarle al navegador, si soportaste esto aplicalo, si no lo soportas aplica esto otro
+
+Los Container Queries: en CSS permiten aplicar estilos a los elementos basados en el tamaño de su contenedor (y no en el tamaño de la ventana, como sucede con las Media Queries). Esto permite que el diseño se adapte de manera más precisa a diferentes tamaños de contenedores.
+
+.container {
+    container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+    .item {
+        background-color: blue;
+    } 
+}
+
+# GRID
+a diferencia de flex, ahora si trabajamos con dos ejes a la vez
+nota: al aplicar display grid el margin no colapsa
+grid-template-columns: define el tamabó de la columna
+auto: lo que hace el valor auto para template-columuns y template-rows es que la celda ocupada todo el espacio disponible para llenar la pantalla
+fr: al darle fr acupa todo el ancho disponible y no tienen en cuenta el contenido de las cajas
+repeat(): sirve para no repetir varias cosas, por ejemplo en vez de poner 1fr 4 veces podemos dar repeat(4, 1fr)
+minmax(): sirve para darle un valor minimo y maximo respecticamente a una columna o fila
+15:42
+Grid explícito: Se refiere a las filas y columnas que defines directamente con propiedades como grid-template-rows y grid-template-columns. Tú decides cuántas filas o columnas tendrá la cuadrícula y sus tamaños.
+
+Grid implícito: Se crea automáticamente cuando colocas más elementos de los que caben en el grid explícito. Las filas o columnas adicionales generadas automáticamente tienen tamaños definidos por propiedades como grid-auto-rows o grid-auto-columns.
+
+grid-auto-flow: para cambiar el sentido del eje principal, tiene valores column y row
+gap: separa las filas y las columnas sin que colapsen entre si, column-gap, row-gap, y para los dos solo es gap
+15:53
+repeat(auto-fit): auto ajusta 
+repeat(auto-fill): auto rellena
+n CSS Grid, tanto auto-fit como auto-fill se usan para crear diseños flexibles y adaptativos que ajustan el número de columnas o filas según el espacio disponible. La diferencia está en cómo se comportan cuando hay espacio extra:
+
+    auto-fill: Llena el contenedor con el mayor número posible de columnas o filas, incluso si algunas quedan vacías. Las columnas vacías no se eliminan, ocupan espacio.
+
+    auto-fit: Hace lo mismo que auto-fill, pero las columnas vacías se colapsan. Solo ajusta el número de columnas o filas que realmente contienen contenido, adaptando el tamaño.
+
+Resumen: auto-fill deja espacio para columnas vacías, mientras que auto-fit elimina esas columnas y ajusta mejor el contenido.
+16:04
+
+# gridf colum y grid row
+grid-column: Define la posición horizontal de un elemento en la cuadrícula, indicando desde qué columna empieza y dónde termina.
+
+grid-row: Define la posición vertical de un elemento, indicando desde qué fila empieza y dónde termina. 
+
+nota: en vez de pasalarle la poscion de inicion podemos pasarle un span n, significa que se va desplazar n columnas o n filas de su posicion inicial
+
+podemos unificar con grid-row: 1/2 o grid-colum: 1/3
+16:35
+# alineacion en grid
+
+justify-items: Alinea los elementos dentro de sus celdas en el eje horizontal (izquierda a derecha) de manera uniforme. Aplica a todos los elementos del grid. Valores comunes:
+
+    start, end, center, stretch.
+
+justify-content: Alinea el grid completo dentro de su contenedor en el eje horizontal, ajustando la distribución de las columnas cuando hay espacio extra. Valores comunes:
+
+    start, end, center, space-between, space-around.
+
+justify-self: Alinea un elemento individual dentro de su celda en el eje horizontal. Anula justify-items para ese elemento. Valores comunes:
+
+    start, end, center, stretch.
+
+align-items: Alinea todos los elementos dentro de sus celdas en el eje vertical (de arriba a abajo). Valores comunes:
+
+    start, end, center, stretch.
+
+align-content: Alinea el grid completo dentro de su contenedor en el eje vertical cuando hay espacio adicional. Afecta a las filas del grid. Valores comunes:
+
+    start, end, center, space-between, space-around.
+
+align-self: Alinea un solo elemento dentro de su celda en el eje vertical, anula align-items para ese elemento. Valores comunes:
+
+    start, end, center, stretch.
+
+#animaciones
+sintaxis básica:
+@keyframes nombre_animacion{
+    from{
+        opacity: 0; comienza la animación
+    }
+    to{
+        opacity: 0; termina la animación
+    }
+}
+1. animation-name
+
+    Define el nombre de la animación que se aplicará al elemento.
+    En este caso, la animación se llama llenar_barra, que está definida con @keyframes.
+    Ejemplo en el código:
+
+    css
+
+    animation-name: llenar_barra;
+
+2. animation-duration
+
+    Establece la duración total de la animación.
+    En este caso, la animación dura 1 segundo (1s).
+    Puede tomar valores como s (segundos) o ms (milisegundos).
+    Ejemplo en el código:
+
+    css
+
+    animation-duration: 1s;
+
+3. animation-delay
+
+    Define el tiempo que la animación esperará antes de comenzar.
+    En este caso, la animación se retrasará 1 segundo antes de empezar.
+    Puede tomar valores como 0s para que inicie inmediatamente o cualquier número de segundos o milisegundos.
+    Ejemplo en el código:
+
+    css
+
+    animation-delay: 1s;
+
+4. animation-fill-mode
+
+    Controla cómo se aplican los estilos de la animación antes o después de su ejecución.
+    Valores posibles:
+        none: No se aplica ningún estilo al elemento fuera del tiempo de la animación.
+        forwards: Mantiene el estilo final (definido en el to) después de que la animación termine.
+        backwards: Aplica los estilos iniciales (definidos en el from) durante el retraso (animation-delay).
+        both: Aplica tanto forwards como backwards, es decir, los estilos iniciales se aplican durante el retraso y los finales después de la ejecución.
+    Ejemplo en el código:
+
+    css
+
+    animation-fill-mode: backwards;
+    animation-fill-mode: none;
+    animation-fill-mode: both; /* Más utilizado */
+
+5. animation-timing-function
+
+    Controla la velocidad con la que se ejecuta la animación en diferentes etapas.
+    Valores comunes:
+        linear: La animación tiene una velocidad constante.
+        ease: Comienza lentamente, se acelera en el medio y desacelera hacia el final.
+        ease-in: Comienza lentamente y se acelera al final.
+        ease-out: Comienza rápido y desacelera al final.
+        ease-in-out: Comienza lentamente, se acelera en el medio y desacelera al final.
+    En este caso, el valor es linear, lo que significa que la animación se ejecuta a una velocidad constante.
+    Ejemplo en el código:
+
+    css
+
+    animation-timing-function: linear;
+
+6. animation-iteration-count
+
+    Define cuántas veces se repetirá la animación.
+    Valores:
+        1 (por defecto): La animación se ejecuta una vez.
+        infinite: La animación se repetirá indefinidamente.
+        También puede tomar cualquier número entero que represente el número de repeticiones.
+    En este caso, la animación es infinita, lo que significa que no dejará de repetirse.
+    Ejemplo en el código:
+
+    css
+
+    animation-iteration-count: infinite;
+
+7. animation-direction
+
+    Controla la dirección en la que se reproduce la animación.
+    Valores:
+        normal: La animación se reproduce en la dirección original (de from a to).
+        reverse: La animación se reproduce al revés (de to a from).
+        alternate: La animación se reproduce en dirección normal y luego se reproduce en dirección opuesta en la siguiente iteración.
+        alternate-reverse: Se reproduce en dirección opuesta en la primera iteración y luego en la dirección normal en la siguiente.
+    En el código, se usan dos valores:
+
+    css
+
+    animation-direction: reverse;
+    animation-direction: alternate;
+
+    Aquí, el valor final es alternate, por lo que la animación irá hacia adelante y luego hacia atrás en cada ciclo.
+
+8. animation-play-state
+
+    Permite pausar o reanudar la animación.
+    Valores:
+        running: La animación se ejecuta (valor por defecto).
+        paused: Pausa la animación en el momento actual.
+    En este código, la animación se pausa cuando se activa el estado :active en la clase .barra:
+
+    css
+
+    animation-play-state: paused;
+
+9. @keyframes
+
+    Define los pasos clave de la animación.
+    En este caso, la animación llenar_barra cambia el ancho (width) de la barra de 0% a 100%, y también cambia el color de fondo de la barra.
+    Ejemplo en el código:
+
+    css
+
+    @keyframes llenar_barra {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 100%;
+            background-color: #f33;
+        }
+    }
+
+Resumen completo de las propiedades de animación:
+
+    animation-name: Nombre de la animación (llenar_barra).
+    animation-duration: Duración de la animación (1s).
+    animation-delay: Retraso antes de comenzar la animación (1s).
+    animation-fill-mode: Define cómo se aplican los estilos fuera del tiempo de animación (none, backwards, both).
+    animation-timing-function: Controla la velocidad de la animación (linear).
+    animation-iteration-count: Número de repeticiones (infinite).
+    animation-direction: Dirección de la animación (alternate).
+    animation-play-state: Permite pausar la animación (paused).
+    @keyframes: Define los pasos clave de la animación (de 0% a 100% de ancho y cambio de color de fondo).
+
+<!-- Funciones de Filtro (filter) -->
+Los filtros se utilizan para aplicar efectos gráficos como desenfoque, brillo y opacidad. Se aplican con la propiedad filter y pueden combinarse. Algunos filtros comunes son:
+
+blur(px): Aplica desenfoque. Mayor valor = mayor desenfoque.
+brightness(%): Ajusta el brillo. 100% es el brillo original; >100% aumenta, <100% reduce.
+contrast(%): Modifica el contraste. 100% es el original; >100% aumenta, <100% reduce.
+grayscale(%): Convierte a escala de grises. 0% es color original, 100% es completamente gris.
+invert(%): Invierte los colores. 0% es normal, 100% es completamente invertido.
+opacity(%): Ajusta la opacidad. 100% es completamente visible, 0% es invisible.
+saturate(%): Cambia la saturación. 100% es normal; >100% sobresatura, <100% desatura.
+sepia(%): Aplica un tono sepia. 100% es completamente sepia.
+Funciones de Transformación (transform)
+
+<!-- Las transformaciones permiten modificar la escala, rotación, posición y otros aspectos geométricos de los elementos. Usan la propiedad transform y también se pueden combinar. -->
+
+rotate(deg): Rota el elemento en grados (ej., rotate(45deg)).
+scale(x, y): Cambia el tamaño del elemento. scale(1) es el tamaño original; valores mayores amplían, menores reducen.
+translate(x, y): Desplaza el elemento en el eje x e y (puede usar px, %, etc.).
+skewX(deg) / skewY(deg): Inclina el elemento en los ejes horizontal o vertical.
+matrix(a, b, c, d, tx, ty): Permite combinaciones complejas de transformación usando una matriz 2D.

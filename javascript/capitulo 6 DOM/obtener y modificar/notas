@@ -1,0 +1,112 @@
+1. ELEMENT_NODE (1)
+
+    Representa los elementos HTML o XML (como <div>, <p>, <span>).
+    Uso frecuente: Para manipular etiquetas y sus atributos.
+    Ejemplo:
+
+    const div = document.querySelector("div");
+    console.log(div.nodeType); // 1
+
+2. TEXT_NODE (3)
+
+    Contiene el contenido de texto dentro de un elemento.
+    Uso frecuente: Para leer o modificar texto en etiquetas.
+    Ejemplo:
+
+    const texto = document.querySelector("p").firstChild;
+    console.log(texto.nodeType); // 3
+
+3. COMMENT_NODE (8)
+
+    Representa los comentarios en el código HTML.
+    Uso frecuente: Para leer o eliminar comentarios del DOM.
+    Ejemplo:
+
+<!-- Este es un comentario -->
+
+    const comentario = document.createComment("Hola");
+    console.log(comentario.nodeType); // 8
+
+4. DOCUMENT_NODE (9)
+
+    Representa el documento entero (el objeto document).
+    Uso frecuente: Punto de entrada para interactuar con el DOM.
+    Ejemplo:
+
+    console.log(document.nodeType); // 9
+
+5. DOCUMENT_FRAGMENT_NODE (11)
+
+    Contenedor para almacenar y manipular nodos temporalmente sin agregarlos al DOM.
+    Uso frecuente: Optimizar modificaciones masivas en el DOM.
+    Ejemplo:
+
+    const fragment = document.createDocumentFragment();
+    const div = document.createElement("div");
+    fragment.appendChild(div);
+
+Resumen de los más utilizados:
+
+    ELEMENT_NODE: Para trabajar con etiquetas HTML.
+    TEXT_NODE: Para manejar texto.
+    DOCUMENT_NODE: Representa el documento completo.
+    DOCUMENT_FRAGMENT_NODE: Para manipulaciones optimizadas.
+
+
+1. getElementById()
+
+    Selecciona un elemento por su atributo id.
+    Retorna: El primer elemento con el id indicado.
+    Ejemplo:
+
+    const elemento = document.getElementById("miId");
+    console.log(elemento);
+
+2. getElementsByClassName()
+
+    Selecciona todos los elementos que tienen una clase específica.
+    Retorna: Una colección live de elementos (HTMLCollection).
+    Ejemplo:
+
+    const elementos = document.getElementsByClassName("miClase");
+    console.log(elementos[0]); // Primer elemento con esa clase
+
+3. getElementsByTagName()
+
+    Selecciona todos los elementos por su nombre de etiqueta (como div, p, span).
+    Retorna: Una colección live (HTMLCollection).
+    Ejemplo:
+
+    const elementos = document.getElementsByTagName("div");
+    console.log(elementos);
+
+4. querySelector()
+
+    Selecciona el primer elemento que coincide con un selector CSS.
+    Retorna: El primer elemento encontrado o null si no encuentra nada.
+    Ejemplo:
+
+    const elemento = document.querySelector(".miClase");
+    console.log(elemento);
+
+5. querySelectorAll()
+
+    Selecciona todos los elementos que coinciden con un selector CSS.
+    Retorna: Una lista estática de nodos (NodeList).
+    Ejemplo:
+
+    const elementos = document.querySelectorAll(".miClase");
+    console.log(elementos);
+
+Diferencias clave:
+
+    getElementById: Solo selecciona por id.
+    getElementsByClassName y getElementsByTagName: Retornan colecciones live (se actualizan si el DOM cambia).
+    querySelector y querySelectorAll: Más flexibles, usan selectores CSS; querySelectorAll retorna listas estáticas.
+
+¿Cuándo usar cada uno?
+
+    getElementById: Cuando sabes el id exacto.
+    getElementsByClassName/getElementsByTagName: Para elementos dinámicos, pero menos recomendados.
+    querySelector/All: Más moderno y versátil, ideal para la mayoría de los casos.
+

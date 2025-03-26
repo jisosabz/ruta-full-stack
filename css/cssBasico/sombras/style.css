@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+.box{
+    width: 300px;
+    background-color: #eee;
+    margin: auto;
+    margin-top: 50px;
+    /*la sombra que se le da a un texto es text-shadow, a una caja box-shadow*/
+    box-shadow: 0px 0px 40px 0px #0007;
+    /* 
+    sombra horizontal, sombra vertical, desenfoque de la sombra, cuanto se expande la combra, color  
+    */
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    text-shadow: 0 0 4px #f88;
+
+    border-radius: 10px;
+    text-align: center;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #444;
+}
+p{
+    font-family: sans-serif;
+    line-height: 1.5;
+    font-size: 12px;
+    text-align: justify;
+}
+img{
+    width: 200px;
+    filter: drop-shadow(0 0 3px #000e);
+    /* sirve para darle sombra a imagenes sin fondo */
+}

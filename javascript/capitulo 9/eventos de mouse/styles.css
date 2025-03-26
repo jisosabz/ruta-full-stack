@@ -1,0 +1,12 @@
+body {
+    color: #222;
+    font-family: sans-serif;
+}
+.container-1 {
+    padding: 30px;
+    background-color: #48e;
+}
+.container-2 {
+    padding: 30px;
+    background-color: #84e;
+}

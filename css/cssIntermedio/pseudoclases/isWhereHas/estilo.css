@@ -1,0 +1,29 @@
+section .elemento1, 
+section .elemento2,
+section .elemento3{
+    
+    color: brown;
+}
+
+/* la forma más facil de seleccionar estos elemento es: */
+section :is(.elemento1,.elemento2,.elemento3){
+    color: blue;
+    /* en pocas palabras agrupa */
+}
+/* si usamos is en vez de where, is si cambia la especificidad */
+
+section :has(.elemento1){
+    /* si existe un elemento1 el fondo va ser negro */
+    background-color: #eee;
+}
+/* en el caso de que a ul le siga un div modificamos el ul  */
+ul:has(+div){
+    background-color: aqua;
+}
+
+label:has(input:invalid){
+    color: red;
+}
+label:has(input:valid){
+    color: #0f0;
+}

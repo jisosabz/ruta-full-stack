@@ -1,0 +1,21 @@
+p{
+    color: blue;
+}
+h1{
+    color: red;
+}
+li {
+    color: grey;
+}
+/* span{
+    color: red
+} */
+
+.ingrediente_faltante{
+    color: red;
+}
+#ingrediente-secreto{
+    color: orange
+}
+
+/* propiedades de texto */

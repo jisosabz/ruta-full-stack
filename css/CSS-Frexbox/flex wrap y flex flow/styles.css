@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.flexbox {
+    height: 100vh;
+    display: flex;
+    /* si los item's no entran se van abajo */
+    flex-wrap: wrap;
+    /* lo mismo de arriba pero abreviado */
+    /* flex-flow: dirección flexwrap */
+    /* flex-flow: row wrap; */
+    flex-wrap: wrap-reverse;
+    
+}
+.flex-item {
+    
+    width: 100px;
+    margin: 10px;
+    background-color: #911;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    direction: rtl;
+}
+.flex-item:first-child {
+    background-color: #d56;
+}
+.flex-item:last-child {
+    background-color: #000;
+    /* 12:8 */
+}

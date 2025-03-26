@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    /* margin: auto; */
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    
+    /* transition-property:  color; */
+    transition-property: left;
+    transition-duration: 1s;
+    /* transition-delay: 1s; cuanto tiempo tarda para que la transición se aplique */
+    transition-timing-function: ease-in-out; /*arranca lento y termina lento*/
+    transition-timing-function: cubic-bezier(cubic-bezier(.24,.37,.83,.67));
+    /* todo en uno */
+    transition: left 1s cubic-bezier(.24,.37,.83,.67) 2s;
+    position: relative;
+    left: 0;
+}
+.box:hover {
+    background-color: #a22;
+    color: #fff;
+}
+body:hover .box {
+    background-color: #48e;
+    left: 400px;
+}

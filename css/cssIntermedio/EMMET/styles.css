@@ -1,0 +1,10 @@
+header {
+    /* m10-10p10e10r */
+    margin: 10px 10% 10em 10rem;
+    /* p10-10p10e10r */
+    padding: 10px 10% 10em 10rem;
+    /* c# */
+    color: #000;
+    /* bgc#231 */
+    background-color: #231;
+}

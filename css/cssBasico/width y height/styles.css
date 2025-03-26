@@ -1,0 +1,21 @@
+div{
+    /* fondo */
+    background: red;
+    /* ancho */
+    width: 400px;
+    /* alto  */
+    height: 200px;
+}
+
+h1 { 
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
+
+input {
+    width: 90%;
+}
+form {
+    width: 300px;
+}

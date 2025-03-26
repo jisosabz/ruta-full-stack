@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background-color: #ccc;
+    font-family: sans-serif;
+}
+.box {
+    width: 250px;
+    height: 200px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid #0006;
+
+    /* aca empezamos a controlar el texto */
+    white-space: pre;
+    white-space: pre-wrap;
+    white-space: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+h1 {
+    text-wrap: balance;
+    text-wrap: pretty;
+}
