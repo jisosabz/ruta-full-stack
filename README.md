@@ -25,7 +25,7 @@ Bienvenido/a a mi repositorio donde registro mi progreso en el camino para conve
 ## 📌 Cómo usar este repositorio
 Si quieres explorar mi aprendizaje, puedes clonar este repositorio con:
 ```sh
- git clone https://github.com/tuusuario/tu-repositorio.git
+ [git clone https://github.com/tuusuario/tu-repositorio.git](https://github.com/jisosabz/ruta-full-stack.git)
 ```
 
 ## 🤝 Contribuciones y sugerencias
