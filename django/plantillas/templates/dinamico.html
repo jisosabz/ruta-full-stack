@@ -12,11 +12,13 @@
     <ul>
         {% for category in categories %}
             {% if category == "code" %}
-            <li><b>{{ category }}</b></li>
+            <li><b>{{ category|upper }}</b></li>
             {% else %}
             <li>{{ category }}</li>
             {% endif %}
         {% endfor %}
+    {#  esto es un filtro  #}
+    <h5>Total categorías: {{ categories|length }}</h5>
     </ul>
 </body>
 </html>
