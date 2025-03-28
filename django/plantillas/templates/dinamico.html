@@ -8,6 +8,15 @@
 <body>
     {#se pone doble llaves para colocar la variable name#}
     <h1>Hola {{name}}</h1>
-    <h3>{{ categories }}</h3>
+    <h3>Categorias</h3>
+    <ul>
+        {% for category in categories %}
+            {% if category == "code" %}
+            <li><b>{{ category }}</b></li>
+            {% else %}
+            <li>{{ category }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </body>
 </html>
