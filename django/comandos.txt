@@ -1,6 +1,12 @@
+**crear nuevo proyecto en django
+=>django-admin startproject nombre-proyecto
+
 **configurar la base de datos: 
 (se llama siempre que se hace una modificación en la estructura de datos)
 =>python manage.py migrate  
 
 **usar el servidor de django:
 =>python manage.py runserver
+
+**poner una variable en una ruta
+path('adulto/<int:variable1>/<int:variable2>/',)
