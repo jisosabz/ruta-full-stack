@@ -10,3 +10,7 @@
 
 **poner una variable en una ruta
 path('adulto/<int:variable1>/<int:variable2>/',)
+
+**importar archivos estaticos (css, javascript, etc)
+crear la carpeta static ahi se crean los archivos estaticos y se crea una variable mas en settings
+STATICFILES_DIRS = []
