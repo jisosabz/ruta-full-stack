@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-top: 10px;
+    font-size: 2em;
+    text-align: center;
+    color: #48e;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li {
+    padding: 10px;
+}
+ul li a {
+    text-decoration: none;
+}
