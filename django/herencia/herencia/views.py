@@ -7,3 +7,5 @@ def ejemploUno(request):
     return render(request, 'ejemploUno.html',{})
 def ejemploDos(request):
     return render(request, 'ejemploDos.html',{})
+def index(request):
+    return render(request, 'index.html',{})

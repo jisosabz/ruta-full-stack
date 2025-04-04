@@ -9,15 +9,8 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Login</a></li>
-        </ul>
-    </nav>
+    {# es para reducir aun más, agregamos un pedazo de codigo a la base #}
+    {% include 'layouts/parcials/menu.html' %}
     <main>
         {# esto es un bloque, se usa para no repetir codigo #}
         {% block content %}
