@@ -14,3 +14,10 @@ path('adulto/<int:variable1>/<int:variable2>/',)
 **importar archivos estaticos (css, javascript, etc)
 crear la carpeta static ahi se crean los archivos estaticos y se crea una variable mas en settings
 STATICFILES_DIRS = []
+
+**crear aplicaciones en django:
+=> python manage.py startapp nombre-de-la-app
+luego si es que se va a usar esa aplicacion en el proyecto se tiene que configurar en settings.py en el array INSTALLED_APPS = []
+
+**verificar si la aplicacion esta funcionando correctamente
+=> python manage.py check comentarios
