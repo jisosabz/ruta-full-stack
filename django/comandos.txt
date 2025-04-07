@@ -21,3 +21,8 @@ luego si es que se va a usar esa aplicacion en el proyecto se tiene que configur
 
 **verificar si la aplicacion esta funcionando correctamente
 => python manage.py check comentarios
+
+**cuando se modifica la estructura de datos se hace lo siguiente
+=>python manage.py makemigrations
+=>python manage.py migrate
+nota: para agregar un dato que sea obligatorio hay que cargarle un valor por default para que no cree problemas
