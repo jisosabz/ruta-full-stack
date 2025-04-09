@@ -28,4 +28,8 @@ luego si es que se va a usar esa aplicacion en el proyecto se tiene que configur
 nota 1: para agregar un dato que sea obligatorio hay que cargarle un valor por default para que no cree problemas
 nota 2: las clases en singular y con la primera letra en mayúscula
 
-*para saber como eliminar y insertar datos ver modularización/comentarios/migrations/views.py
+**para saber como eliminar y insertar datos ver modularización/comentarios/migrations/views.py
+
+**para poblar una bd de django con datos de prueba se puede usar django_seed, se agrega 'django_seed' en apps instaladas en sentting y luego se usa los siguientes comandos:
+=>pip install psycopg2-binary (por si sale un bug)
+=>python manage.py seed nombre_de_aplicacion --number=15
