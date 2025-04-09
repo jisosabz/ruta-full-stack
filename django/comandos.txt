@@ -27,3 +27,5 @@ luego si es que se va a usar esa aplicacion en el proyecto se tiene que configur
 =>python manage.py migrate
 nota 1: para agregar un dato que sea obligatorio hay que cargarle un valor por default para que no cree problemas
 nota 2: las clases en singular y con la primera letra en mayúscula
+
+*para saber como eliminar y insertar datos ver modularización/comentarios/migrations/views.py
