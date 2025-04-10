@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <h3>de 10 elemento va saltar 5 y mostrar el resto</h3>
+    {% for o in offsets %}
+        <ul>
+            <li>{{ o.name }}({{ o.email }})</li>
+        </ul>
+    {% endfor %}
+    <h3>filtrar los primeros 10 elementos</h3>
+    {% for l in limit %}
+        <ul>
+            <li>{{ l.name }}({{ l.email }})</li>
+        </ul>
+    {% endfor %}
+    <h3>Elemento filtrado por id</h3>
+    {{ author.name }} ({{ author.email }})
+    <h3>Filtrando por email</h3>
+    <ul>
+        {% for filter in filtered %}
+            <li>{{filter.name}}({{ filter.email }})</li>
+        {% endfor %}
+    </ul>
+    <h3>Todos los autores</h3>
+    <ul>
+        {% for author in authors %}
+            <li>{{author.name}}({{ author.email }})</li>
+        {% endfor %}
+    </ul>
+    <h3>Total autores: {{ authors|length }}</h3>
+</body>
+</html>
