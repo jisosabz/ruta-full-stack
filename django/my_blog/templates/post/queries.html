@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
+    <h3>filtar todos los email que en su nombre contenga la palabra be</h3>
+    <ul>
+        {% for contain in contienen %}
+            <li>{{ contain.name }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Filtrar por condiciones (>=, <=, etc)</h3>
+    <ul>
+        {% for filter in filtered2 %}
+            <li>{{ filter.name }}({{ filter.email }})</li>
+        {% endfor %}
+    </ul>
+    <h3>Ordenar por nombre</h3>
+    <ul>
+        {% for order in orders %}
+            <li>{{order.name}}({{ order.email }})</li>
+        {% endfor %}
+    </ul>
     <h3>de 10 elemento va saltar 5 y mostrar el resto</h3>
     {% for o in offsets %}
         <ul>
