@@ -1,7 +1,15 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from sqlparse.utils import offset
 
 from .models import Author, Entry
+def update(request):
+    # para realizar la actualización se toma el objeto, se modifica y se vuelve a guardar en la bd
+    author = Author.objects.get(id=1)
+    author.name = "Iván"
+    author.email = "ivansosabz@gmail.com"
+    author.save()
+    return HttpResponse("Updated")
 def queries(request):
     #obtener todos los elementos de un objeto
     authors = Author.objects.all()
@@ -27,6 +35,7 @@ def queries(request):
     filtered2 = Author.objects.all().filter(id__lte= 15)
     #filtar todos los email que en su nombre contenga la palabra be
     contienen = Author.objects.all().filter(name__icontains="be")
+
 
 
     return render(request, 'post/queries.html', {
