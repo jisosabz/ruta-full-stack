@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/formularios_django.iml" filepath="$PROJECT_DIR$/.idea/formularios_django.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FormulariosModelos.iml" filepath="$PROJECT_DIR$/.idea/FormulariosModelos.iml" />
     </modules>
   </component>
 </project>
