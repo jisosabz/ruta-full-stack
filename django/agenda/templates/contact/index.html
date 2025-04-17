@@ -1,0 +1,33 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+    <!-- Formulario de búsqueda -->
+    <form method="get" action="{% url 'contact' %}" class="form-search">
+        <input type="text" name="search" placeholder="Buscar contacto..." class="input buscar">
+        <input type="submit" value="Buscar" class="btn enviar">
+    </form>
+
+    <!-- Acciones principales -->
+    <div class="acciones">
+        <a href="{% url 'contact' %}" class="btn btn-secundario">Ver Todos</a>
+        <a href="#" class="btn">Añadir Contacto</a>
+    </div>
+
+    <!-- Lista de contactos -->
+    <ul class="list">
+        {% for contact in contacts %}
+            <li>
+                <div class="contacto-nombre">{{ contact.name }}</div>
+                <div class="acciones-contacto">
+                    <a href="#" class="link-accent">Ver</a>
+                    <a href="#" class="link-accent">Editar</a>
+                    <a href="#" class="link-accent borrar">Borrar</a>
+                </div>
+            </li>
+        {% empty %}
+            <li class="vacio">No hay contactos disponibles.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

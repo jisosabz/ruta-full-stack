@@ -1,0 +1,223 @@
+:root {
+    --color-primary: #4a90e2;
+    --color-secondary: #dceeff;
+    --color-text: #444;
+    --color-light: #fff;
+    --color-muted: #888;
+    --color-danger: #e74c3c;
+
+    --font-main: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --font-text: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-text);
+}
+
+body {
+    background-color: #f9fbfc;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-main);
+}
+
+/*nav {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    height: 80px;*/
+/*    background-color: var(--color-primary);*/
+/*}*/
+
+/*nav ul {*/
+/*    list-style: none;*/
+/*    display: flex;*/
+/*    gap: 40px;*/
+/*}*/
+
+/*nav ul li a {*/
+/*    text-decoration: none;*/
+/*    color: var(--color-light);*/
+/*    text-transform: uppercase;*/
+/*    font-family: var(--font-main);*/
+/*    transition: color 0.3s ease;*/
+/*}*/
+
+/*nav ul li a:hover {*/
+/*    color: #000;*/
+/*}*/
+nav {
+    background-color: var(--color-primary);
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    height: 70px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #dcefff;
+    transform: scale(1.05);
+}
+
+main {
+    width: 100vw;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Buscador */
+.form-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.input {
+    height: 45px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.buscar {
+    width: 300px;
+}
+
+.btn {
+    height: 45px;
+    padding: 0 20px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #357ac9;
+}
+
+.btn-secundario {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secundario:hover {
+    background-color: #b6dfff;
+}
+
+/* Acciones */
+.acciones {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Lista de Contactos */
+.list {
+    list-style: none;
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.list li {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.list li:hover {
+    background-color: #f5faff;
+}
+
+.contacto-nombre {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.acciones-contacto {
+    display: flex;
+    gap: 15px;
+}
+
+.link-accent {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.link-accent:hover {
+    color: #000;
+}
+
+.borrar {
+    color: var(--color-danger);
+}
+
+.borrar:hover {
+    text-decoration: underline;
+}
+
+.vacio {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: var(--color-muted);
+}
