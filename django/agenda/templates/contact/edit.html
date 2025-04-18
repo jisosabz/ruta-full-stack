@@ -1,29 +1,30 @@
 {% extends 'layout/base.html' %}
 
-{% block title %}Contacto | Crear{% endblock %}
+{% block title %}Contacto | Editar{% endblock %}
 
 {% block content %}
 <div class="acciones">
     <a href="{% url 'contact' %}" class="btn btn-secundario">Volver Atrás</a>
 </div>
+{#    aca se despliega los mensajes#}
 {% if messages %}
   <div class="container my-3">
     {% for message in messages %}
       <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
         {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+{#        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>#}
       </div>
     {% endfor %}
   </div>
 {% endif %}
-
+{# aca se despliega el formulario#}
 <div class="container mt-4">
   <div class="card shadow-sm rounded">
     <div class="card-header bg-dark text-white">
       <h5 class="mb-0">Crear nuevo contacto</h5>
     </div>
     <div class="card-body">
-      <form action="{% url 'contact_create'  %}" method="POST">
+      <form action="{% url 'contact_edit' id=id %}" method="POST">
         {% csrf_token %}
         {% for field in form %}
           <div class="mb-3">

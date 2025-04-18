@@ -221,3 +221,10 @@ main {
     font-style: italic;
     color: var(--color-muted);
 }
+.messages {
+    list-style: none;
+    text-decoration: none;
+}
+.alert-succes {
+    list-style: none;
+}

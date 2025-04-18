@@ -12,7 +12,7 @@
     <!-- Acciones principales -->
     <div class="acciones">
         <a href="{% url 'contact' %}" class="btn btn-secundario">Ver Todos</a>
-        <a href="#" class="btn">Añadir Contacto</a>
+        <a href="{% url 'contact_create' %}" class="btn">Añadir Contacto</a>
     </div>
 
     <!-- Lista de contactos -->
@@ -21,9 +21,9 @@
             <li>
                 <div class="contacto-nombre">{{ contact.name }}</div>
                 <div class="acciones-contacto">
-                    <a href="#" class="link-accent">Ver</a>
-                    <a href="#" class="link-accent">Editar</a>
-                    <a href="#" class="link-accent borrar">Borrar</a>
+                    <a href="{% url 'contact_view' id=contact.id %}" class="link-accent">Ver</a>
+                    <a href="{% url 'contact_edit' id=contact.id %}" class="link-accent">Editar</a>
+                    <a href="{% url 'contact_delete' id=contact.id %}" class="link-accent borrar">Borrar</a>
                 </div>
             </li>
         {% empty %}
